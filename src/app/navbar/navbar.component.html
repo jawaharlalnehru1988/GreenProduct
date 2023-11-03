@@ -1,9 +1,11 @@
 <div class="green-Tool">
     <mat-toolbar>
-        <img class="logo" src="assets/image/gplogo.png" alt="">
+        <img class="logo" src="assets/image/greenlog.png" alt="">
             <mat-form-field class="example-form-field" appearance="outline">
-              
-            <input placeholder="Search your item" matInput type="text">
+                <span matPrefix class="search_icon material-symbols-outlined">
+                    search
+                    </span>
+            <input placeholder="Search For Products" matInput type="text">
           </mat-form-field>
           <button mat-button class="example-icon" aria-label="Example icon-button with share icon">
           
@@ -20,15 +22,45 @@
         </button>
         <mat-menu #menuSign="matMenu">
             <button mat-menu-item class="sign-up">
-              <span>New Customer?</span> <span class="me-4">Sign Up</span> 
-            </button>
-            <button mat-menu-item disabled>
-              <mat-icon>voicemail</mat-icon>
-              <span>Check voice mail</span>
+              <span>New Customer?</span> <button mat-button class="sign-up" color="primary">Sign Up</button> 
             </button>
             <button mat-menu-item>
-              <mat-icon>notifications_off</mat-icon>
-              <span>Disable alerts</span>
+              <mat-icon> <span class="material-symbols-outlined">
+                person
+              </span></mat-icon>
+              <span>My Profile</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon>
+                <span class="material-symbols-outlined">
+                    orders
+                    </span>
+              </mat-icon>
+              <span>Orders</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>
+                    <span class="material-symbols-outlined">
+                        favorite
+                        </span>
+                </mat-icon>
+                <span>WishList</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>
+                    <span class="material-symbols-outlined">
+                        featured_seasonal_and_gifts
+                        </span>
+                </mat-icon>
+                <span>Rewards</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>
+                    <span class="material-symbols-outlined">
+                        redeem
+                        </span>
+                </mat-icon>
+                <span>Gift Cards</span>
             </button>
           </mat-menu>
         <button mat-button class="example-icon" aria-label="Example icon-button with share icon">
