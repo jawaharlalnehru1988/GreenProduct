@@ -1,0 +1,30 @@
+.green-Tool{
+    margin-top: -10px !important;
+}
+.logo{
+    width: 8%;
+}
+.example-form-field {
+    width: 30vw;
+    position: relative;
+    top: 12px;
+  }
+
+  .hover-primary {
+    background-color: #1976D2; /* Replace with your desired primary color */
+    color: white; /* Text color on hover */
+  }
+  mat-toolbar{
+    justify-content: space-around;
+    
+  }
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+.sign-up{
+    border-bottom: 1px solid;
+}

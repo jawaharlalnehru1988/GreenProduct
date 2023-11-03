@@ -1,0 +1,85 @@
+<div class="green-Tool">
+    <mat-toolbar>
+        <img class="logo" src="assets/image/gplogo.png" alt="">
+            <mat-form-field class="example-form-field" appearance="outline">
+              
+            <input placeholder="Search your item" matInput type="text">
+          </mat-form-field>
+          <button mat-button class="example-icon" aria-label="Example icon-button with share icon">
+          
+            <mat-icon> <span class="material-symbols-outlined">
+                storefront
+                </span></mat-icon> Become a Seller
+          </button>
+        <button mat-button [matMenuTriggerFor]="menuSign" class="example-icon" aria-label="Example icon-button with share icon" 
+        (mouseenter)="isHovered = true" (mouseleave)="isHovered = false" [ngClass]="{'hover-primary': isHovered}">
+          
+          <mat-icon class="material-symbols-outlined">
+          person
+        </mat-icon> Sign In
+        </button>
+        <mat-menu #menuSign="matMenu">
+            <button mat-menu-item class="sign-up">
+              <span>New Customer?</span> <span class="me-4">Sign Up</span> 
+            </button>
+            <button mat-menu-item disabled>
+              <mat-icon>voicemail</mat-icon>
+              <span>Check voice mail</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon>notifications_off</mat-icon>
+              <span>Disable alerts</span>
+            </button>
+          </mat-menu>
+        <button mat-button class="example-icon" aria-label="Example icon-button with share icon">
+          
+          <mat-icon>
+            <span class="material-symbols-outlined">
+                shopping_cart
+                </span>
+        </mat-icon> Cart
+        </button>
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+          <mat-icon>
+            <span class="material-symbols-outlined">
+            more_vert
+            </span>
+        </mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            <mat-icon>
+                <span class="material-symbols-outlined">
+                    notifications
+                    </span>
+            </mat-icon>
+            <span>Notifications</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>
+                <span class="material-symbols-outlined">
+                support_agent
+                </span>
+            </mat-icon>
+            <span>24 x 7 Customer Care</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>
+                <span class="material-symbols-outlined">
+                    add_ad
+                    </span>
+            </mat-icon>
+            <span>Advertisements</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>
+                <span class="material-symbols-outlined">
+                    download
+                    </span>
+            </mat-icon>
+            <span>Download App</span>
+          </button>
+        </mat-menu>
+    </mat-toolbar>
+    
+</div>
