@@ -1,3 +1,7 @@
+.gray-background {
+  background-color: #ccc; /* Use the appropriate shade of gray or a color code of your choice */
+  height: 100vh;
+}
 .green-Tool{
     margin-top: -10px !important;
 }
@@ -38,4 +42,27 @@
 
     height: 24px !important;
     width: 24px !important;
+}
+
+.display-items{
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+}
+.variety-section{
+  display: flex;
+  height: 20vh;
+  width: 100vw;
+  background-color: floralwhite;
+  margin: 8px;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+$itemwidth: 72px;
+.image-class{
+  width: $itemwidth;
+}
+.item-name{
+  width: $itemwidth;
+  text-align: center;
 }
