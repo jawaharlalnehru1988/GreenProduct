@@ -1,3 +1,5 @@
+<div class="gray-background">
+
 <div class="green-Tool">
     <mat-toolbar>
         <img class="logo" src="assets/image/greenlog.png" alt="">
@@ -114,4 +116,17 @@
         </mat-menu>
     </mat-toolbar>
     
+</div>
+<div class="variety-section" >
+  <div class="display-items" *ngFor="let item of items">
+    <div>
+      <img class="image-class" [src]="item.image" alt="">
+    </div>
+    <div class="item-name">
+      {{item.itemName}}
+    </div>
+
+  </div>
+
+</div>
 </div>
