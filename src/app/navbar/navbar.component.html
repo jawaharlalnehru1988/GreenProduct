@@ -1,26 +1,30 @@
 <div class="gray-background">
 
-<div class="green-Tool">
+  <div class="green-Tool">
     <mat-toolbar>
-        <img class="logo" src="assets/image/greenlog.png" alt="">
-            <mat-form-field class="example-form-field" appearance="outline">
-                <span matPrefix class="search_icon material-symbols-outlined">
-                    search
-                    </span>
-            <input placeholder="Search For Products" matInput type="text">
-          </mat-form-field>
-          <button mat-button class="example-icon" aria-label="Example icon-button with share icon">
-          
-            <mat-icon> <span class="material-symbols-outlined">
-                storefront
-                </span></mat-icon> Become a Seller
-          </button>
-        <button mat-button [matMenuTriggerFor]="menuSign" class="example-icon" aria-label="Example icon-button with share icon" 
-        (mouseenter)="isHovered = true" (mouseleave)="isHovered = false" [ngClass]="{'hover-primary': isHovered}">
-          
+      <img class="logo" src="assets/image/greenlog.png" alt="">
+      <mat-form-field class="example-form-field" appearance="outline">
+        <span matPrefix class="search_icon material-symbols-outlined">search</span>
+        <input placeholder="Search For Products" matInput type="text" [formControl]="myControl"
+          [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+            <mat-icon>search</mat-icon>{{option}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+      <div class="seller">
+        <button mat-button class="example-icon" aria-label="Example icon-button with share icon">
+          <mat-icon> <span class="material-symbols-outlined">
+              storefront
+            </span></mat-icon> Become a Seller
+        </button>
+        <button mat-button [matMenuTriggerFor]="menuSign" class="example-icon"
+          aria-label="Example icon-button with share icon" (mouseenter)="isHovered = true"
+          (mouseleave)="isHovered = false" [ngClass]="{'hover-primary': isHovered}">
           <mat-icon class="material-symbols-outlined">
-          person
-        </mat-icon> Sign In
+            person
+          </mat-icon> Sign In
         </button>
         <mat-menu #menuSign="matMenu">
             <button mat-menu-item class="sign-up">
@@ -66,13 +70,13 @@
             </button>
           </mat-menu>
         <button mat-button class="example-icon" aria-label="Example icon-button with share icon">
-          
           <mat-icon>
             <span class="material-symbols-outlined">
                 shopping_cart
                 </span>
         </mat-icon> Cart
         </button>
+      </div>
         <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
           <mat-icon>
             <span class="material-symbols-outlined">
@@ -115,7 +119,29 @@
           </button>
         </mat-menu>
     </mat-toolbar>
-    
+    <mat-toolbar class="mobile-toolbar">
+      <div class="mobile-subtool">
+      <button mat-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon> <span class="material-symbols-outlined">
+            storefront
+          </span></mat-icon> Become a Seller
+      </button>
+      <button mat-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>
+          <span class="material-symbols-outlined">
+              shopping_cart
+              </span>
+      </mat-icon> Cart
+      </button>
+      <button mat-button [matMenuTriggerFor]="menuSign" class="example-icon"
+          aria-label="Example icon-button with share icon" (mouseenter)="isHovered = true"
+          (mouseleave)="isHovered = false" [ngClass]="{'hover-primary': isHovered}">
+          <mat-icon class="material-symbols-outlined">
+            person
+          </mat-icon> Sign In
+        </button>
+      </div>
+    </mat-toolbar>
 </div>
 <div class="variety-section" >
   <div class="display-items" *ngFor="let item of items">
@@ -123,7 +149,7 @@
       <img class="image-class" [src]="item.image" alt="">
     </div>
     <div class="item-name">
-      {{item.itemName}}
+     <strong>{{item.itemName}}</strong>
     </div>
 
   </div>
