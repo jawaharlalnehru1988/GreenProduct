@@ -13,6 +13,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
     MatToolbarModule,
     ReactiveFormsModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    SlickCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
