@@ -87,11 +87,17 @@
 .variety-section{
   display: flex;
   height: 20vh;
-  width: 100vw;
+  // width: 100vw;
   background-color: floralwhite;
   margin: 8px;
   align-items: flex-start;
   justify-content: space-evenly;
+}
+.slide-name{
+    text-align: center;
+    font-family: fantasy;
+    font-size: large;
+    margin-top: 12px;
 }
 $itemwidth: 72px;
 .image-class{
@@ -101,3 +107,21 @@ $itemwidth: 72px;
   width: $itemwidth;
   text-align: center;
 }
+
+.slick-prev::before, .slick-prev::after{
+  color: black !important;
+}
+.img-style {
+  margin-left: auto;
+  margin-right: auto;
+  height: 250px;
+  // width: 350px;
+}
+.img-style:hover{
+  transform: scale(1.023);
+  cursor: pointer;
+}
+
+.carousel{
+  background: 1px seashell;
+}   

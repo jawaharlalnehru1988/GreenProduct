@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable, map, startWith } from 'rxjs';
+
+
+
+
 export interface Natural{
   image: string;
   itemName: string;
@@ -27,6 +31,14 @@ export class NavbarComponent {
     {image: 'assets/image/incense.png', itemName: "Incense", id:7},
     {image: 'assets/image/grains.png', itemName: "Grains", id:8},
   ];
+  slides : Natural[] = [
+    {image: 'assets/oilsoaps/soapbox.jpg', itemName: "AloeVera", id: 11},
+    {image: 'assets/oilsoaps/soapbox2.jpg', itemName: "Multani Mutti", id: 12},
+    {image: 'assets/oilsoaps/soapbox3.jpg', itemName: "Avaramboo", id: 13},
+    // {image: 'assets/oilsoaps/soapbox4.jpg', itemName: "firstBox4", id: 14},
+    // {image: 'assets/oilsoaps/soapbox5.jpg', itemName: "firstBox5", id: 15},
+  ];
+  slideConfig = {"slidesToShow": 3, "slidesToScroll": 5};
   ngOnInit(): void{
     this.filteredOptions = this.myControl.valueChanges.pipe(
       startWith(''),
@@ -38,4 +50,13 @@ export class NavbarComponent {
 
     return this.options.filter(option => option.toLowerCase().includes(filterValue));
   }
+  addSlide() {
+    this.slides.push({
+      image: "assets/oilsoaps/soapbox4.jpg",
+      itemName: '',
+      id: 0
+    })
+  }
+  
+
 }

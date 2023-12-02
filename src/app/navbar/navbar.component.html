@@ -8,6 +8,7 @@
         <input placeholder="Search For Products" matInput type="text" [formControl]="myControl"
           [matAutocomplete]="auto">
         <mat-autocomplete #auto="matAutocomplete">
+          <mat-option><strong> Discover More</strong></mat-option>
           <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
             <mat-icon>search</mat-icon>{{option}}
           </mat-option>
@@ -151,8 +152,17 @@
     <div class="item-name">
      <strong>{{item.itemName}}</strong>
     </div>
-
   </div>
-
 </div>
+
+<ngx-slick-carousel class="carousel" 
+#slickModal="slick-carousel" 
+[config]="slideConfig" 
+>
+<div ngxSlickItem *ngFor="let slide of slides" class="slide">
+<img src="{{ slide.image }}" alt="" class="img-style">
+    <div class="slide-name"> {{slide.itemName}}</div>
+</div>
+</ngx-slick-carousel>
+
 </div>
